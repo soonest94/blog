@@ -4,12 +4,12 @@ baseURL = 'https://soonest94.github.io/blog/'
 theme = 'LoveIt'
 
 # website title
-title = 'soonest playgrnd'
+title = 'playgrnd'
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = 'en-us'
+languageCode = 'ko'
 # language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+languageName = "한국어"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
 
@@ -29,7 +29,7 @@ enableEmoji = true
 
 # Author config
 [author]
-  name = "laika"
+  name = "soonest"
   email = "soonest94@gmail.com"
   link = ""
 
@@ -42,7 +42,7 @@ enableEmoji = true
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Posts"
+    name = "글"
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
@@ -51,7 +51,7 @@ enableEmoji = true
     identifier = "tags"
     pre = ""
     post = ""
-    name = "Tags"
+    name = "태그"
     url = "/tags/"
     title = ""
   [[menu.main]]
@@ -59,7 +59,7 @@ enableEmoji = true
     identifier = "categories"
     pre = ""
     post = ""
-    name = "Categories"
+    name = "카테고리"
     url = "/categories/"
     title = ""
 
@@ -68,21 +68,58 @@ enableEmoji = true
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   gitRepo = ""
-  # LoveIt NEW | 0.1.1 which hash function used for SRI, when empty, no SRI is used
+  # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   #fingerprint = ""
-  # LoveIt NEW | 0.2.0 date format
+  # date format
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
-  title = "soonest playgrnd"
+  title = "playgrnd"
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "Hello world :)"
   # website images for Open Graph and Twitter Cards
   #images = ["/logo.png"]
 
+  # Header config
+  [params.header]
+    # desktop header mode ["fixed", "normal", "auto"]
+    desktopMode = "fixed"
+    # mobile header mode ["fixed", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "playgrnd"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = ''
+    # whether to show Hugo and theme info
+    hugo = true
+    # whether to show copyright info
+    copyright = true
+    # whether to show the author
+    author = true
+    # Site creation time
+    since = 2023
+    # ICP info only in China (HTML format is supported)
+    #icp = ""
+    # license info (HTML format is supported)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
   # Home page config
   [params.home]
-    # LoveIt NEW | 0.2.0 amount of RSS pages
+    # amount of RSS pages
     rss = 10
     # Home page profile
     [params.home.profile]
@@ -91,24 +128,56 @@ enableEmoji = true
       gravatarEmail = ""
       # URL of avatar shown in home page
       #avatarURL = "/images/avatar.png"
-      # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
-      title = "soonest playgrnd"
+      # title shown in home page (HTML format is supported)
+      title = "playgrnd"
       # subtitle shown in home page (HTML format is supported)
       subtitle = "Hello world :)"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
       social = true
-      # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
+      # disclaimer (HTML format is supported)
       disclaimer = ""
     # Home page posts
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
       paginate = 6
-      # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
-      # default behavior when you don't set "hiddenFromHomePage" in front matter
-      defaultHiddenFromHomePage = false
+
+  # Social config about the author
+  [params.social]
+    GitHub = "soonest94"
+    Email = "soonest94@gmail.com"
+
+  # Page global config
+  [params.page]
+    # whether to enable twemoji
+    twemoji = false
+    # Table of the contents config
+    [params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      #keepStatic = true
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+    # Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 50
+
+  # Site SEO config
+  [params.seo]
+    # image URL
+    image = ""
+    # thumbnail URL
+    thumbnailUrl = ""
+
+  # Analytics config
+  [params.analytics]
+    enable = false
 
 # Markup related configuration in Hugo
 [markup]
